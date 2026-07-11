@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Worker Status Contract",
+  "type": "object",
+  "required": [
+    "task_id", "status", "summary", "files_changed",
+    "tests", "commit", "risks", "next_action"
+  ],
+  "properties": {
+    "task_id": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["completed", "blocked", "needs_approval", "failed"]
+    },
+    "summary": { "type": "string" },
+    "files_changed": { "type": "array", "items": { "type": "string" } },
+    "tests": { "type": "array", "items": { "type": "object" } },
+    "commit": { "type": "string" },
+    "risks": { "type": "array", "items": { "type": "string" } },
+    "next_action": { "type": "string" }
+  },
+  "additionalProperties": false
+}
