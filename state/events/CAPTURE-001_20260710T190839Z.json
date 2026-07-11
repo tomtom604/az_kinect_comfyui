@@ -1,0 +1,13 @@
+{
+  "event_type": "worker_launch_finished",
+  "timestamp": "2026-07-10T19:08:39.364242+00:00",
+  "task_id": "CAPTURE-001",
+  "owner": "capture-worker",
+  "branch": "agent/capture",
+  "worktree": "/home/thard/az_kinnect_comfyUI.worktrees/capture",
+  "max_attempts": 2,
+  "status": "completed_process",
+  "finished_at": "2026-07-10T19:13:00.666907+00:00",
+  "opencode_exit_code": 0,
+  "audit_log": "/home/thard/az_kinnect_comfyUI/state/audit/CAPTURE-001_20260710T190839Z.jsonl"
+}

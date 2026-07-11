@@ -1,0 +1,22 @@
+{
+  "task_id": "POSE-001",
+  "validation_status": "pending_human_review",
+  "worker_branch": "agent/pose",
+  "worker_worktree": "/home/thard/az_kinnect_comfyUI.worktrees/pose",
+  "commit": "ea67499fd5a953fe099f9722f72c80f7f25c3d57",
+  "changed_files": [
+    "fixtures/skeletons/missing_joints.json",
+    "fixtures/skeletons/neutral_standing.json",
+    "src/azure_kinect_comfyui/pose/__init__.py",
+    "src/azure_kinect_comfyui/pose/mapping.py",
+    "src/azure_kinect_comfyui/pose/renderer.py",
+    "tests/pose/__init__.py",
+    "tests/pose/conftest.py",
+    "tests/pose/test_mapping.py",
+    "tests/pose/test_renderer.py"
+  ],
+  "independently_executed_tests": [
+    "python3 -m pytest tests/pose/"
+  ],
+  "next_action": "Human review required. No merge, deployment, or follow-up worker dispatch is authorized by this validation result."
+}

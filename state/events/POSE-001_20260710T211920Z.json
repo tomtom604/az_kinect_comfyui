@@ -1,0 +1,13 @@
+{
+  "event_type": "worker_launch_finished",
+  "timestamp": "2026-07-10T21:19:20.456366+00:00",
+  "task_id": "POSE-001",
+  "owner": "pose-worker",
+  "branch": "agent/pose",
+  "worktree": "/home/thard/az_kinnect_comfyUI.worktrees/pose",
+  "max_attempts": 2,
+  "status": "completed_process",
+  "finished_at": "2026-07-10T21:21:13.994449+00:00",
+  "opencode_exit_code": 0,
+  "audit_log": "/home/thard/az_kinnect_comfyUI/state/audit/POSE-001_20260710T211920Z.jsonl"
+}

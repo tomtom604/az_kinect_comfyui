@@ -1,0 +1,10 @@
+{
+  "event_type": "worker_launch_requested",
+  "timestamp": "2026-07-10T19:00:53.682318+00:00",
+  "task_id": "CAPTURE-001",
+  "owner": "capture-worker",
+  "branch": "agent/capture",
+  "worktree": "/home/thard/az_kinnect_comfyUI.worktrees/capture",
+  "max_attempts": 2,
+  "status": "pending"
+}

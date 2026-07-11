@@ -1,0 +1,27 @@
+{
+  "task_id": "CAPTURE-001",
+  "status": "completed",
+  "summary": "Implemented a hardware-independent KinectFrame data model and deterministic synthetic mock/replay source.",
+  "files_changed": [
+    "fixtures/kinect_frames.json",
+    "src/azure_kinect_comfyui/capture/__init__.py",
+    "src/azure_kinect_comfyui/capture/mock_source.py",
+    "src/azure_kinect_comfyui/capture/models.py",
+    "tests/capture/__init__.py",
+    "tests/capture/conftest.py",
+    "tests/capture/test_mock_source.py",
+    "tests/capture/test_models.py"
+  ],
+  "tests": [
+    {
+      "name": "python3 -m pytest tests/capture/",
+      "status": "passed"
+    }
+  ],
+  "commit": "05c4228",
+  "risks": [
+    "This is synthetic mock/replay behavior only; no Kinect hardware, Azure SDK, or live-device behavior was tested.",
+    "The test-only conftest.py adds the repository src directory to sys.path for the src-layout package."
+  ],
+  "next_action": "Run independent validation and submit for human review; do not merge automatically."
+}

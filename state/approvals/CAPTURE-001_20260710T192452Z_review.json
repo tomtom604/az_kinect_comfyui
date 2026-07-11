@@ -1,0 +1,27 @@
+{
+  "approval_id": "CAPTURE-001_20260710T192452Z_review",
+  "task_id": "CAPTURE-001",
+  "status": "pending_human_review",
+  "requested_action": "Review validated worker branch; explicitly approve or reject integration.",
+  "worker_branch": "agent/capture",
+  "commit": "05c422803b3ca45fd0fbb8a3aa78add080eba860",
+  "changed_files": [
+    "fixtures/kinect_frames.json",
+    "src/azure_kinect_comfyui/capture/__init__.py",
+    "src/azure_kinect_comfyui/capture/mock_source.py",
+    "src/azure_kinect_comfyui/capture/models.py",
+    "tests/capture/__init__.py",
+    "tests/capture/conftest.py",
+    "tests/capture/test_mock_source.py",
+    "tests/capture/test_models.py"
+  ],
+  "worker_status_evidence": "/home/thard/az_kinnect_comfyUI/state/results/CAPTURE-001_20260710T192452Z_worker_status.json",
+  "validation_evidence": "/home/thard/az_kinnect_comfyUI/state/review/CAPTURE-001_05c422803b3c_validated.json",
+  "created_at": "2026-07-10T19:24:52.817342+00:00",
+  "constraints": [
+    "No merge has occurred.",
+    "No deployment has occurred.",
+    "No follow-up worker was launched.",
+    "Explicit human approval remains required."
+  ]
+}

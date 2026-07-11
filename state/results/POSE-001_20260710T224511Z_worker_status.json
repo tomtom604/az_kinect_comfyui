@@ -1,0 +1,39 @@
+{
+  "task_id": "POSE-001",
+  "status": "completed",
+  "summary": "Implemented Kinect-to-BODY_25 pose mapping and a deterministic PPM pose renderer using synthetic fixtures.",
+  "files_changed": [
+    "fixtures/skeletons/missing_joints.json",
+    "fixtures/skeletons/neutral_standing.json",
+    "src/azure_kinect_comfyui/pose/__init__.py",
+    "src/azure_kinect_comfyui/pose/mapping.py",
+    "src/azure_kinect_comfyui/pose/renderer.py",
+    "tests/pose/__init__.py",
+    "tests/pose/conftest.py",
+    "tests/pose/test_mapping.py",
+    "tests/pose/test_renderer.py"
+  ],
+  "tests": [
+    {
+      "name": "python3 -m pytest tests/pose/ -v",
+      "status": "passed",
+      "result": "41 passed in 0.35s"
+    },
+    {
+      "name": "git diff --check",
+      "status": "passed",
+      "result": "no whitespace errors"
+    },
+    {
+      "name": "git diff --cached --check",
+      "status": "passed",
+      "result": "no whitespace errors"
+    }
+  ],
+  "commit": "ea67499",
+  "risks": [
+    "Pose mapping and rendering were validated only against synthetic fixtures.",
+    "No Azure Kinect hardware, SDK, depth alignment, or ComfyUI deployment was tested."
+  ],
+  "next_action": "Submit for independent review."
+}

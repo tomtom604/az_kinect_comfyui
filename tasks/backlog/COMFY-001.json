@@ -1,0 +1,34 @@
+{
+  "task_id": "COMFY-001",
+  "owner": "comfy-worker",
+  "objective": "Create a mock-backed ComfyUI node package skeleton that reads fixture-compatible data only and exposes placeholder image outputs without modifying an installed ComfyUI directory.",
+  "owned_paths": [
+    "src/azure_kinect_comfyui/comfy/**",
+    "tests/comfy/**"
+  ],
+  "read_only_paths": [
+    "contracts/**",
+    "docs/PHASE0.md",
+    "AGENTS.md"
+  ],
+  "forbidden_paths": [
+    ".opencode/**",
+    "opencode.json",
+    "orchestrator/**",
+    "scripts/**",
+    "src/azure_kinect_comfyui/capture/**",
+    "src/azure_kinect_comfyui/pose/**",
+    "/mnt/f/**"
+  ],
+  "acceptance_criteria": [
+    "The package defines ComfyUI-compatible registration scaffolding.",
+    "The node uses fixture/mock input only.",
+    "No models are downloaded and no installed ComfyUI files are changed.",
+    "Tests validate import behavior and node registration structures."
+  ],
+  "allowed_tests": [
+    "python -m pytest tests/comfy/"
+  ],
+  "max_attempts": 2,
+  "requires_human_approval": false
+}

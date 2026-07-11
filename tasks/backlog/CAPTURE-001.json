@@ -1,0 +1,35 @@
+{
+  "task_id": "CAPTURE-001",
+  "owner": "capture-worker",
+  "objective": "Define a hardware-independent KinectFrame data model and implement a deterministic mock/replay frame source using only synthetic fixtures.",
+  "owned_paths": [
+    "src/azure_kinect_comfyui/capture/**",
+    "tests/capture/**",
+    "fixtures/**"
+  ],
+  "read_only_paths": [
+    "contracts/task.schema.json",
+    "contracts/status.schema.json",
+    "docs/PHASE0.md",
+    "AGENTS.md"
+  ],
+  "forbidden_paths": [
+    ".opencode/**",
+    "opencode.json",
+    "orchestrator/**",
+    "contracts/**",
+    "scripts/**",
+    "/mnt/f/**"
+  ],
+  "acceptance_criteria": [
+    "A typed KinectFrame contract exists with color, depth, joints, calibration metadata, timestamps, and tracking state.",
+    "A mock source replays a deterministic fixture without hardware or Azure SDK imports.",
+    "Tests cover valid frame replay, exhausted replay behavior, and tracking-lost behavior.",
+    "No dependency installation, device access, or SDK import occurs."
+  ],
+  "allowed_tests": [
+    "python3 -m pytest tests/capture/"
+  ],
+  "max_attempts": 2,
+  "requires_human_approval": false
+}

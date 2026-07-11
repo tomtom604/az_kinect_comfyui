@@ -1,0 +1,10 @@
+{
+  "event_type": "worker_launch_requested",
+  "timestamp": "2026-07-10T21:41:23.919409+00:00",
+  "task_id": "POSE-001",
+  "owner": "pose-worker",
+  "branch": "agent/pose",
+  "worktree": "/home/thard/az_kinnect_comfyUI.worktrees/pose",
+  "max_attempts": 2,
+  "status": "pending"
+}

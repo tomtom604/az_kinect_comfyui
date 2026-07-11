@@ -1,0 +1,13 @@
+{
+  "event_type": "worker_launch_finished",
+  "timestamp": "2026-07-10T22:52:38.226661+00:00",
+  "task_id": "COMFY-001",
+  "owner": "comfy-worker",
+  "branch": "agent/comfy",
+  "worktree": "/home/thard/az_kinnect_comfyUI.worktrees/comfy",
+  "max_attempts": 2,
+  "status": "completed_process",
+  "finished_at": "2026-07-10T22:57:03.050781+00:00",
+  "opencode_exit_code": 0,
+  "audit_log": "/home/thard/az_kinnect_comfyUI/state/audit/COMFY-001_20260710T225238Z.jsonl"
+}
