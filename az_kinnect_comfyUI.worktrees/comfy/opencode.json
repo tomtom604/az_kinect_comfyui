@@ -1,0 +1,60 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "autoupdate": "notify",
+  "default_agent": "orchestrator",
+  "instructions": ["AGENTS.md"],
+  "watcher": {
+    "ignore": [
+      ".git/**",
+      ".venv/**",
+      "state/**",
+      "worktrees/**",
+      "models/**",
+      "output/**"
+    ]
+  },
+  "permission": {
+    "external_directory": "deny",
+    "webfetch": "ask",
+    "websearch": "ask",
+    "question": "allow",
+    "doom_loop": "ask",
+    "task": "deny",
+    "bash": {
+      "*": "ask"
+    },
+    "edit": {
+      "*": "ask"
+    }
+  },
+  "agent": {
+    "orchestrator": {
+      "description": "Read-only project planner and dispatcher. It never edits, merges, installs, or deploys.",
+      "mode": "primary",
+      "model": "opencode-go/glm-5.2",
+      "temperature": 0.1,
+      "maxSteps": 12,
+      "prompt": ".opencode/agents/orchestrator.md",
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "edit": "deny",
+        "bash": {
+          "*": "deny",
+          "git status*": "allow",
+          "git log*": "allow",
+          "git diff*": "allow"
+        },
+        "task": {
+          "capture-worker": "allow",
+          "pose-worker": "allow",
+          "comfy-worker": "allow",
+          "reviewer": "allow"
+        }
+      }
+    }
+  }
+}
