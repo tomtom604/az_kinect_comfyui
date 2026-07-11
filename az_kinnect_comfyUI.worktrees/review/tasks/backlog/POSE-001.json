@@ -1,0 +1,37 @@
+{
+  "task_id": "POSE-001",
+  "owner": "pose-worker",
+  "objective": "Create a documented, deterministic Kinect 32-joint to BODY_25-compatible intermediate mapping and render synthetic OpenPose-style pose maps without hardware access.",
+  "owned_paths": [
+    "src/azure_kinect_comfyui/pose/**",
+    "tests/pose/**",
+    "fixtures/skeletons/**"
+  ],
+  "read_only_paths": [
+    "contracts/task.schema.json",
+    "contracts/status.schema.json",
+    "docs/PHASE0.md",
+    "AGENTS.md"
+  ],
+  "forbidden_paths": [
+    ".opencode/**",
+    "opencode.json",
+    "orchestrator/**",
+    "contracts/**",
+    "scripts/**",
+    "src/azure_kinect_comfyui/capture/**",
+    "src/azure_kinect_comfyui/comfy/**",
+    "/mnt/f/**"
+  ],
+  "acceptance_criteria": [
+    "The mapping explicitly documents every retained, omitted, and synthetic BODY_25 keypoint.",
+    "The renderer produces deterministic image output for a fixture.",
+    "Tests cover neutral standing, missing joints, and a confidence threshold.",
+    "Ambiguous hand and face mappings are documented instead of guessed."
+  ],
+  "allowed_tests": [
+    "python -m pytest tests/pose/"
+  ],
+  "max_attempts": 2,
+  "requires_human_approval": false
+}

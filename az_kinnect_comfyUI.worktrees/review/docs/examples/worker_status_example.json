@@ -1,0 +1,21 @@
+{
+  "task_id": "CAPTURE-001",
+  "status": "completed",
+  "summary": "Implemented mock KinectFrame replay source with synthetic fixtures.",
+  "files_changed": [
+    "src/azure_kinect_comfyui/capture/example.py",
+    "tests/capture/test_example.py",
+    "fixtures/example.json"
+  ],
+  "tests": [
+    {
+      "name": "python -m pytest tests/capture/",
+      "status": "passed"
+    }
+  ],
+  "commit": "REPLACE_WITH_ACTUAL_COMMIT_SHA",
+  "risks": [
+    "Hardware behavior has not been tested."
+  ],
+  "next_action": "Submit for independent review."
+}
